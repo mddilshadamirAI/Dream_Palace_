@@ -1,0 +1,4562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Dream Palace Makhdumpur | Marriage & Banquet Hall in Jehanabad</title>
+
+    <meta name="description"
+          content="Dream Palace Makhdumpur is a newly opened marriage and banquet hall near Paibigha More, Makhdumpur, Jehanabad, Bihar, suitable for weddings, receptions, ring ceremonies, birthdays, parties and corporate gatherings.">
+
+    <meta name="theme-color" content="#11100f">
+
+    <!-- Open Graph -->
+    <meta property="og:title"
+          content="Dream Palace Makhdumpur | Marriage & Banquet Hall">
+
+    <meta property="og:description"
+          content="Where Every Celebration Becomes a Memory. Dream Palace Makhdumpur, Jehanabad, Bihar.">
+
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+          rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <style>
+
+        /* =========================================================
+           DREAM PALACE MAKHDUMPUR
+           PREMIUM SINGLE PAGE WEBSITE
+           ========================================================= */
+
+        :root {
+            --black: #0b0a09;
+            --deep: #11100f;
+            --deep-2: #171513;
+            --charcoal: #201d1a;
+
+            --ivory: #f5f0e7;
+            --cream: #e9dfd0;
+
+            --gold: #c8a15b;
+            --gold-light: #e5c987;
+            --gold-dark: #8e6b34;
+
+            --wine: #5b1825;
+            --wine-light: #7c2737;
+
+            --white: #ffffff;
+            --muted: rgba(245, 240, 231, .62);
+
+            --border: rgba(229, 201, 135, .20);
+
+            --ease: cubic-bezier(.22, 1, .36, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background: var(--black);
+        }
+
+        body {
+            background: var(--black);
+            color: var(--ivory);
+            font-family: "Manrope", sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        ::selection {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        button,
+        a {
+            font: inherit;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            border: 0;
+            background: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        /* =========================================================
+           SCROLLBAR
+           ========================================================= */
+
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--black);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold-dark);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold);
+        }
+
+        /* =========================================================
+           GLOBAL
+           ========================================================= */
+
+        .container {
+            width: min(1240px, calc(100% - 48px));
+            margin-inline: auto;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--gold-light);
+            text-transform: uppercase;
+            letter-spacing: .24em;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 34px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .section-title {
+            font-family: "Playfair Display", serif;
+            font-weight: 400;
+            font-size: clamp(42px, 6vw, 78px);
+            line-height: .98;
+            letter-spacing: -.035em;
+        }
+
+        .section-title em {
+            color: var(--gold-light);
+            font-weight: 400;
+        }
+
+        .section-copy {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.9;
+            max-width: 560px;
+        }
+
+        .gold-line {
+            width: 70px;
+            height: 1px;
+            background: linear-gradient(
+                90deg,
+                var(--gold),
+                transparent
+            );
+        }
+
+        /* =========================================================
+           PRELOADER
+           ========================================================= */
+
+        .loader {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            background: var(--black);
+            display: grid;
+            place-items: center;
+            transition:
+                opacity .9s var(--ease),
+                visibility .9s var(--ease);
+        }
+
+        .loader.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-inner {
+            text-align: center;
+        }
+
+        .loader-small {
+            font-size: 10px;
+            letter-spacing: .4em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .loader-title {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(40px, 7vw, 80px);
+            line-height: .9;
+        }
+
+        .loader-subtitle {
+            margin-top: 12px;
+            letter-spacing: .35em;
+            font-size: 10px;
+            color: var(--muted);
+        }
+
+        .loader-line {
+            width: 180px;
+            height: 1px;
+            margin: 28px auto 0;
+            background: rgba(255,255,255,.12);
+            overflow: hidden;
+        }
+
+        .loader-line span {
+            display: block;
+            width: 0;
+            height: 100%;
+            background: var(--gold);
+            animation: loading 1.5s ease forwards;
+        }
+
+        @keyframes loading {
+            to {
+                width: 100%;
+            }
+        }
+
+        /* =========================================================
+           SCROLL PROGRESS
+           ========================================================= */
+
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            z-index: 9999;
+            background: var(--gold);
+            box-shadow: 0 0 12px rgba(200,161,91,.6);
+        }
+
+        /* =========================================================
+           CUSTOM CURSOR
+           ========================================================= */
+
+        .cursor-dot,
+        .cursor-ring {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+
+        .cursor-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--gold-light);
+        }
+
+        .cursor-ring {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid rgba(229,201,135,.55);
+            transition:
+                width .3s ease,
+                height .3s ease,
+                background .3s ease;
+        }
+
+        body.cursor-ready .cursor-dot,
+        body.cursor-ready .cursor-ring {
+            opacity: 1;
+        }
+
+        body.cursor-hover .cursor-ring {
+            width: 62px;
+            height: 62px;
+            background: rgba(200,161,91,.07);
+        }
+
+        @media (max-width: 800px) {
+            .cursor-dot,
+            .cursor-ring {
+                display: none;
+            }
+        }
+
+        /* =========================================================
+           NAVIGATION
+           ========================================================= */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 5000;
+            padding: 22px 0;
+            transition:
+                background .5s ease,
+                padding .5s ease,
+                border .5s ease,
+                backdrop-filter .5s ease;
+        }
+
+        .navbar.scrolled {
+            padding: 13px 0;
+            background: rgba(11,10,9,.78);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .nav-inner {
+            width: min(1380px, calc(100% - 48px));
+            margin-inline: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand-mark {
+            width: 39px;
+            height: 39px;
+            border: 1px solid rgba(229,201,135,.6);
+            display: grid;
+            place-items: center;
+            transform: rotate(45deg);
+        }
+
+        .brand-mark span {
+            transform: rotate(-45deg);
+            font-family: "Playfair Display", serif;
+            color: var(--gold-light);
+            font-size: 15px;
+        }
+
+        .brand-text strong {
+            display: block;
+            font-family: "Playfair Display", serif;
+            font-size: 17px;
+            line-height: 1;
+            letter-spacing: .06em;
+            font-weight: 500;
+        }
+
+        .brand-text small {
+            display: block;
+            margin-top: 4px;
+            color: var(--gold-light);
+            letter-spacing: .3em;
+            font-size: 7px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: clamp(16px, 2.3vw, 34px);
+        }
+
+        .nav-links a {
+            position: relative;
+            color: rgba(255,255,255,.75);
+            font-size: 10px;
+            letter-spacing: .16em;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: color .3s ease;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width .35s var(--ease);
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-call {
+            border: 1px solid rgba(229,201,135,.35);
+            padding: 11px 17px;
+            color: var(--gold-light);
+            font-size: 9px;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            transition: all .35s ease;
+        }
+
+        .nav-call:hover {
+            background: var(--gold);
+            color: var(--black);
+            border-color: var(--gold);
+        }
+
+        .menu-button {
+            display: none;
+            width: 43px;
+            height: 43px;
+            border: 1px solid rgba(255,255,255,.18);
+            place-items: center;
+        }
+
+        /* Mobile menu */
+
+        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            z-index: 4500;
+            background: rgba(11,10,9,.98);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: .5s ease;
+        }
+
+        .mobile-menu.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-links {
+            display: flex;
+            flex-direction: column;
+            gap: 23px;
+            text-align: center;
+        }
+
+        .mobile-links a {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(30px, 8vw, 50px);
+            color: var(--ivory);
+            transition: color .3s ease;
+        }
+
+        .mobile-links a:hover {
+            color: var(--gold-light);
+        }
+
+        /* =========================================================
+           HERO
+           ========================================================= */
+
+        .hero {
+            position: relative;
+            height: 100svh;
+            min-height: 680px;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            isolation: isolate;
+        }
+
+        .hero-image {
+            position: absolute;
+            inset: 0;
+            z-index: -5;
+        }
+
+        .hero-image img {
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.08);
+            animation: heroZoom 12s ease-out forwards;
+        }
+
+        @keyframes heroZoom {
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -3;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5,4,4,.78) 0%,
+                    rgba(5,4,4,.38) 42%,
+                    rgba(5,4,4,.15) 75%,
+                    rgba(5,4,4,.52) 100%
+                ),
+                linear-gradient(
+                    0deg,
+                    rgba(5,4,4,.9) 0%,
+                    transparent 52%,
+                    rgba(5,4,4,.25) 100%
+                );
+        }
+
+        .hero-vignette {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            box-shadow: inset 0 0 160px rgba(0,0,0,.55);
+            pointer-events: none;
+        }
+
+        #particleCanvas {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            opacity: .6;
+        }
+
+        .hero-content {
+            width: min(1240px, calc(100% - 48px));
+            margin: 0 auto;
+            padding-bottom: clamp(65px, 10vh, 120px);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-kicker {
+            color: var(--gold-light);
+            font-size: 11px;
+            letter-spacing: .32em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: heroText .9s .25s var(--ease) forwards;
+        }
+
+        .hero-title {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(64px, 11vw, 154px);
+            font-weight: 400;
+            line-height: .78;
+            letter-spacing: -.055em;
+            max-width: 950px;
+            opacity: 0;
+            animation: heroText 1s .35s var(--ease) forwards;
+        }
+
+        .hero-title span {
+            display: block;
+            color: var(--gold-light);
+            font-style: italic;
+            font-size: .55em;
+            margin-top: 22px;
+            margin-left: 8px;
+            letter-spacing: -.02em;
+        }
+
+        .hero-subtitle {
+            max-width: 550px;
+            margin-top: 30px;
+            color: rgba(255,255,255,.72);
+            font-size: 14px;
+            line-height: 1.8;
+            opacity: 0;
+            animation: heroText .9s .55s var(--ease) forwards;
+        }
+
+        .hero-location {
+            margin-top: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,.65);
+            font-size: 10px;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            opacity: 0;
+            animation: heroText .9s .65s var(--ease) forwards;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 13px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            opacity: 0;
+            animation: heroText .9s .75s var(--ease) forwards;
+        }
+
+        @keyframes heroText {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn {
+            min-height: 50px;
+            padding: 0 23px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: .17em;
+            text-transform: uppercase;
+            transition:
+                transform .35s var(--ease),
+                background .35s ease,
+                border .35s ease,
+                color .35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 70%;
+            height: 100%;
+            transform: skewX(-20deg);
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,.3),
+                transparent
+            );
+            transition: left .7s ease;
+        }
+
+        .btn:hover::before {
+            left: 140%;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,.38);
+            background: rgba(255,255,255,.04);
+            backdrop-filter: blur(8px);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold-light);
+        }
+
+        .scroll-discover {
+            position: absolute;
+            right: 34px;
+            bottom: 42px;
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            writing-mode: vertical-rl;
+            font-size: 8px;
+            letter-spacing: .3em;
+            color: rgba(255,255,255,.55);
+            text-transform: uppercase;
+        }
+
+        .scroll-discover::after {
+            content: "";
+            width: 1px;
+            height: 70px;
+            background: linear-gradient(
+                var(--gold),
+                transparent
+            );
+            animation: scrollLine 2s infinite;
+        }
+
+        @keyframes scrollLine {
+            0%, 100% {
+                transform: scaleY(.45);
+                transform-origin: top;
+            }
+            50% {
+                transform: scaleY(1);
+            }
+        }
+
+        /* =========================================================
+           INTRO
+           ========================================================= */
+
+        .intro {
+            padding: clamp(110px, 15vw, 190px) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: clamp(50px, 9vw, 130px);
+            align-items: center;
+        }
+
+        .intro-copy {
+            padding-left: 40px;
+        }
+
+        .intro-copy .section-title {
+            margin-top: 24px;
+        }
+
+        .intro-copy .section-copy {
+            margin-top: 30px;
+        }
+
+        .intro-number {
+            position: absolute;
+            top: 80px;
+            left: -20px;
+            font-size: 10px;
+            color: var(--gold);
+            letter-spacing: .3em;
+            writing-mode: vertical-rl;
+        }
+
+        .intro-image-wrap {
+            position: relative;
+            min-height: 570px;
+        }
+
+        .intro-image {
+            position: absolute;
+            width: 80%;
+            height: 100%;
+            right: 0;
+            overflow: hidden;
+        }
+
+        .intro-image img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.2s var(--ease);
+        }
+
+        .intro-image-wrap:hover img {
+            transform: scale(1.04);
+        }
+
+        .intro-frame {
+            position: absolute;
+            width: 50%;
+            height: 55%;
+            left: 0;
+            bottom: -30px;
+            border: 1px solid var(--gold);
+            z-index: -1;
+            opacity: .5;
+        }
+
+        .intro-stamp {
+            position: absolute;
+            right: 40px;
+            bottom: -25px;
+            width: 90px;
+            height: 90px;
+            border: 1px solid rgba(229,201,135,.4);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: var(--black);
+            color: var(--gold-light);
+            text-align: center;
+            font-family: "Playfair Display", serif;
+            font-size: 11px;
+            line-height: 1.1;
+        }
+
+        /* =========================================================
+           HIGHLIGHTS
+           ========================================================= */
+
+        .highlights {
+            padding: 110px 0;
+            background:
+                radial-gradient(
+                    circle at 20% 30%,
+                    rgba(91,24,37,.17),
+                    transparent 35%
+                ),
+                var(--deep);
+            border-block: 1px solid rgba(255,255,255,.05);
+        }
+
+        .highlights-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            align-items: flex-end;
+            margin-bottom: 60px;
+        }
+
+        .highlights-head .section-copy {
+            max-width: 420px;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--border);
+            border-left: 1px solid var(--border);
+        }
+
+        .highlight-card {
+            position: relative;
+            min-height: 250px;
+            padding: 35px;
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            overflow: hidden;
+            transition:
+                background .5s ease,
+                transform .5s var(--ease);
+        }
+
+        .highlight-card::after {
+            content: "";
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            right: -40px;
+            bottom: -40px;
+            border-radius: 50%;
+            background: var(--wine);
+            filter: blur(35px);
+            opacity: 0;
+            transition: opacity .5s ease;
+        }
+
+        .highlight-card:hover {
+            background: rgba(255,255,255,.025);
+            transform: translateY(-5px);
+        }
+
+        .highlight-card:hover::after {
+            opacity: .5;
+        }
+
+        .highlight-icon {
+            width: 45px;
+            height: 45px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(229,201,135,.25);
+            color: var(--gold-light);
+            margin-bottom: 50px;
+        }
+
+        .highlight-card h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            font-weight: 400;
+        }
+
+        .highlight-card p {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 9px;
+            line-height: 1.7;
+            max-width: 280px;
+        }
+
+        .card-number {
+            position: absolute;
+            top: 35px;
+            right: 35px;
+            color: rgba(255,255,255,.16);
+            font-size: 11px;
+            letter-spacing: .15em;
+        }
+
+        /* =========================================================
+           EXPERIENCE / ARCHITECTURE
+           ========================================================= */
+
+        .experience {
+            padding: clamp(120px, 16vw, 200px) 0;
+            overflow: hidden;
+        }
+
+        .experience-header {
+            display: grid;
+            grid-template-columns: 1fr .7fr;
+            gap: 60px;
+            align-items: end;
+            margin-bottom: 90px;
+        }
+
+        .experience-title {
+            margin-top: 22px;
+        }
+
+        .experience-layout {
+            position: relative;
+            min-height: 750px;
+        }
+
+        .experience-main {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 70%;
+            height: 650px;
+            overflow: hidden;
+        }
+
+        .experience-main img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .experience-main::after,
+        .experience-side::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                transparent 45%,
+                rgba(0,0,0,.25)
+            );
+            pointer-events: none;
+        }
+
+        .experience-side {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 40%;
+            height: 400px;
+            border: 8px solid var(--black);
+            overflow: hidden;
+        }
+
+        .experience-side img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .experience-label {
+            position: absolute;
+            z-index: 2;
+            left: 20px;
+            bottom: 20px;
+            background: rgba(11,10,9,.72);
+            backdrop-filter: blur(12px);
+            padding: 12px 16px;
+            border-left: 1px solid var(--gold);
+        }
+
+        .experience-label small {
+            display: block;
+            color: var(--gold-light);
+            text-transform: uppercase;
+            letter-spacing: .2em;
+            font-size: 7px;
+        }
+
+        .experience-label strong {
+            font-family: "Playfair Display", serif;
+            font-weight: 400;
+            font-size: 17px;
+        }
+
+        .experience-copy {
+            position: absolute;
+            z-index: 4;
+            width: 330px;
+            right: 28%;
+            top: 30%;
+            background: rgba(17,16,15,.94);
+            border: 1px solid rgba(229,201,135,.22);
+            padding: 32px;
+            box-shadow: 20px 30px 80px rgba(0,0,0,.4);
+        }
+
+        .experience-copy h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 30px;
+            font-weight: 400;
+        }
+
+        .experience-copy p {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.8;
+            margin-top: 15px;
+        }
+
+        /* =========================================================
+           CINEMATIC
+           ========================================================= */
+
+        .cinematic {
+            min-height: 75vh;
+            position: relative;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+        }
+
+        .cinematic img {
+            position: absolute;
+            inset: -8%;
+            width: 116%;
+            height: 116%;
+            object-fit: cover;
+            filter: brightness(.55);
+        }
+
+        .cinematic::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.7),
+                    transparent 50%,
+                    rgba(0,0,0,.7)
+                ),
+                linear-gradient(
+                    0deg,
+                    rgba(0,0,0,.5),
+                    transparent
+                );
+        }
+
+        .cinematic-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .cinematic-content p {
+            color: var(--gold-light);
+            letter-spacing: .35em;
+            font-size: 9px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .cinematic-content h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(45px, 8vw, 110px);
+            font-weight: 400;
+            line-height: .9;
+        }
+
+        /* =========================================================
+           EVENTS
+           ========================================================= */
+
+        .events {
+            padding: clamp(120px, 15vw, 180px) 0;
+            background: var(--ivory);
+            color: var(--black);
+        }
+
+        .events .eyebrow {
+            color: var(--gold-dark);
+        }
+
+        .events-grid {
+            margin-top: 70px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-top: 1px solid rgba(0,0,0,.15);
+        }
+
+        .event-item {
+            min-height: 170px;
+            padding: 30px 0;
+            display: grid;
+            grid-template-columns: 70px 1fr;
+            gap: 30px;
+            border-bottom: 1px solid rgba(0,0,0,.15);
+            transition: padding .4s var(--ease);
+        }
+
+        .event-item:nth-child(odd) {
+            padding-right: 45px;
+            border-right: 1px solid rgba(0,0,0,.15);
+        }
+
+        .event-item:nth-child(even) {
+            padding-left: 45px;
+        }
+
+        .event-item:hover {
+            padding-left: 15px;
+        }
+
+        .event-no {
+            color: var(--gold-dark);
+            font-size: 10px;
+            letter-spacing: .15em;
+        }
+
+        .event-item h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 29px;
+            font-weight: 400;
+        }
+
+        .event-item p {
+            margin-top: 8px;
+            color: rgba(11,10,9,.55);
+            font-size: 12px;
+            line-height: 1.7;
+            max-width: 370px;
+        }
+
+        /* =========================================================
+           WHY
+           ========================================================= */
+
+        .why {
+            padding: clamp(120px, 16vw, 200px) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        .why-image {
+            height: 650px;
+            position: relative;
+        }
+
+        .why-image img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .why-image::before {
+            content: "";
+            position: absolute;
+            inset: 20px -20px -20px 20px;
+            border: 1px solid var(--gold);
+            z-index: -1;
+            opacity: .4;
+        }
+
+        .why-list {
+            margin-top: 50px;
+        }
+
+        .why-row {
+            display: grid;
+            grid-template-columns: 55px 1fr;
+            gap: 20px;
+            padding: 24px 0;
+            border-top: 1px solid rgba(255,255,255,.1);
+        }
+
+        .why-row:last-child {
+            border-bottom: 1px solid rgba(255,255,255,.1);
+        }
+
+        .why-row span {
+            color: var(--gold);
+            font-size: 9px;
+            letter-spacing: .15em;
+        }
+
+        .why-row h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        .why-row p {
+            margin-top: 5px;
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        /* =========================================================
+           GALLERY
+           ========================================================= */
+
+        .gallery-section {
+            padding: clamp(110px, 14vw, 170px) 0;
+            background: var(--deep);
+        }
+
+        .gallery-head {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: 75px;
+            gap: 10px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            background: #171513;
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 7;
+            grid-row: span 7;
+        }
+
+        .gallery-item:nth-child(2) {
+            grid-column: span 5;
+            grid-row: span 5;
+        }
+
+        .gallery-item:nth-child(3) {
+            grid-column: span 5;
+            grid-row: span 5;
+        }
+
+        .gallery-item:nth-child(4) {
+            grid-column: span 4;
+            grid-row: span 5;
+        }
+
+        .gallery-item:nth-child(5) {
+            grid-column: span 3;
+            grid-row: span 5;
+        }
+
+        .gallery-item:nth-child(6) {
+            grid-column: span 6;
+            grid-row: span 5;
+        }
+
+        .gallery-item:nth-child(7) {
+            grid-column: span 6;
+            grid-row: span 5;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s var(--ease), filter .7s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.07);
+            filter: brightness(.75);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity .4s ease;
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,.65)
+            );
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay span {
+            font-family: "Playfair Display", serif;
+            font-size: 18px;
+        }
+
+        .gallery-overlay i {
+            width: 35px;
+            height: 35px;
+            border: 1px solid rgba(255,255,255,.4);
+            display: grid;
+            place-items: center;
+        }
+
+        /* =========================================================
+           LIGHTBOX
+           ========================================================= */
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 9000;
+            background: rgba(0,0,0,.96);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            opacity: 0;
+            visibility: hidden;
+            transition: .45s ease;
+        }
+
+        .lightbox.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox-image {
+            max-width: 92vw;
+            max-height: 84vh;
+            object-fit: contain;
+            box-shadow: 0 30px 100px rgba(0,0,0,.6);
+        }
+
+        .lightbox-close,
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            border: 1px solid rgba(255,255,255,.2);
+            display: grid;
+            place-items: center;
+            background: rgba(0,0,0,.3);
+            transition: .3s ease;
+        }
+
+        .lightbox-close {
+            right: 25px;
+            top: 25px;
+        }
+
+        .lightbox-prev {
+            left: 25px;
+        }
+
+        .lightbox-next {
+            right: 25px;
+        }
+
+        .lightbox-close:hover,
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 9px;
+            letter-spacing: .25em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,.6);
+        }
+
+        /* =========================================================
+           LOCATION
+           ========================================================= */
+
+        .location {
+            padding: clamp(120px, 15vw, 180px) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 540px;
+            border: 1px solid var(--border);
+        }
+
+        .location-copy {
+            padding: clamp(40px, 7vw, 85px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background:
+                radial-gradient(
+                    circle at 20% 80%,
+                    rgba(91,24,37,.25),
+                    transparent 40%
+                ),
+                var(--deep);
+        }
+
+        .location-copy .section-title {
+            margin-top: 24px;
+            font-size: clamp(42px, 5vw, 65px);
+        }
+
+        .address {
+            margin-top: 35px;
+            display: flex;
+            gap: 15px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .address i {
+            color: var(--gold);
+            flex: 0 0 auto;
+            margin-top: 4px;
+        }
+
+        .map-panel {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(
+                    circle at 50% 50%,
+                    rgba(200,161,91,.12),
+                    transparent 25%
+                ),
+                #151311;
+            display: grid;
+            place-items: center;
+        }
+
+        .map-grid {
+            position: absolute;
+            inset: 0;
+            opacity: .22;
+            background-image:
+                linear-gradient(
+                    rgba(229,201,135,.2) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(229,201,135,.2) 1px,
+                    transparent 1px
+                );
+            background-size: 55px 55px;
+            transform: perspective(500px) rotateX(55deg) scale(1.5);
+            transform-origin: center bottom;
+        }
+
+        .map-marker {
+            position: relative;
+            z-index: 2;
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            border: 1px solid rgba(229,201,135,.5);
+            display: grid;
+            place-items: center;
+            color: var(--gold-light);
+            background: rgba(11,10,9,.7);
+            backdrop-filter: blur(10px);
+            animation: markerPulse 2.8s infinite;
+        }
+
+        .map-marker::before,
+        .map-marker::after {
+            content: "";
+            position: absolute;
+            inset: -15px;
+            border: 1px solid rgba(200,161,91,.18);
+            border-radius: 50%;
+            animation: markerPulse 2.8s infinite;
+        }
+
+        .map-marker::after {
+            inset: -30px;
+            animation-delay: .8s;
+        }
+
+        @keyframes markerPulse {
+            0%, 100% {
+                transform: scale(.95);
+                opacity: .65;
+            }
+            50% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* =========================================================
+           CONTACT CTA
+           ========================================================= */
+
+        .contact {
+            padding: clamp(120px, 15vw, 190px) 0;
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(91,24,37,.5),
+                    transparent 45%
+                ),
+                var(--deep);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: "DREAM";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-family: "Playfair Display", serif;
+            font-size: clamp(130px, 22vw, 350px);
+            color: rgba(255,255,255,.015);
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact .section-title {
+            margin-top: 22px;
+            font-size: clamp(48px, 8vw, 100px);
+        }
+
+        .contact-copy {
+            max-width: 560px;
+            margin: 25px auto 0;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .phone-number {
+            display: inline-block;
+            margin-top: 35px;
+            color: var(--gold-light);
+            font-family: "Playfair Display", serif;
+            font-size: clamp(27px, 4vw, 43px);
+        }
+
+        .contact-actions {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        footer {
+            background: #080807;
+            padding: 65px 0 30px;
+            border-top: 1px solid rgba(255,255,255,.06);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 60px;
+        }
+
+        .footer-brand h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 34px;
+            font-weight: 400;
+        }
+
+        .footer-brand p {
+            margin-top: 10px;
+            color: var(--muted);
+            font-size: 11px;
+            max-width: 320px;
+        }
+
+        .footer-title {
+            color: var(--gold-light);
+            font-size: 9px;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,.55);
+            font-size: 11px;
+            transition: color .3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-light);
+        }
+
+        .footer-contact {
+            color: rgba(255,255,255,.6);
+            font-size: 11px;
+            line-height: 1.9;
+        }
+
+        .footer-contact strong {
+            display: block;
+            color: var(--ivory);
+            font-family: "Playfair Display", serif;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .footer-bottom {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,.07);
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            color: rgba(255,255,255,.3);
+            font-size: 9px;
+        }
+
+        .instagram-link {
+            color: var(--gold-light);
+        }
+
+        /* =========================================================
+           FLOATING WHATSAPP
+           ========================================================= */
+
+        .floating-whatsapp {
+            position: fixed;
+            z-index: 4000;
+            right: 25px;
+            bottom: 25px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: #25D366;
+            color: white;
+            box-shadow:
+                0 10px 35px rgba(37,211,102,.3);
+            animation: whatsappPulse 2.8s infinite;
+        }
+
+        .floating-whatsapp::before {
+            content: "";
+            position: absolute;
+            inset: -7px;
+            border: 1px solid rgba(37,211,102,.3);
+            border-radius: 50%;
+        }
+
+        @keyframes whatsappPulse {
+            0%, 100% {
+                box-shadow: 0 10px 35px rgba(37,211,102,.3);
+            }
+            50% {
+                box-shadow: 0 10px 55px rgba(37,211,102,.5);
+            }
+        }
+
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            white-space: nowrap;
+            background: var(--deep);
+            border: 1px solid rgba(255,255,255,.12);
+            color: var(--ivory);
+            padding: 9px 13px;
+            font-size: 9px;
+            letter-spacing: .08em;
+            opacity: 0;
+            transform: translateX(8px);
+            pointer-events: none;
+            transition: .3s ease;
+        }
+
+        .floating-whatsapp:hover .whatsapp-tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* =========================================================
+           REVEAL ANIMATIONS
+           ========================================================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(45px);
+            transition:
+                opacity 1s var(--ease),
+                transform 1s var(--ease);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-image {
+            overflow: hidden;
+        }
+
+        .reveal-image img {
+            transform: scale(1.12);
+            transition: transform 1.4s var(--ease);
+        }
+
+        .reveal-image.visible img {
+            transform: scale(1);
+        }
+
+        /* =========================================================
+           3D DECORATIVE ORB
+           ========================================================= */
+
+        .three-decoration {
+            position: absolute;
+            right: -130px;
+            top: 20%;
+            width: 340px;
+            height: 340px;
+            pointer-events: none;
+            opacity: .45;
+        }
+
+        /* =========================================================
+           RESPONSIVE
+           ========================================================= */
+
+        @media (max-width: 1050px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-cta {
+                margin-left: auto;
+            }
+
+            .menu-button {
+                display: grid;
+            }
+
+            .intro-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-copy {
+                padding-left: 0;
+            }
+
+            .intro-image-wrap {
+                min-height: 580px;
+            }
+
+            .highlight-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .experience-copy {
+                right: 10%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 760px) {
+
+            .container {
+                width: min(100% - 32px, 1240px);
+            }
+
+            .nav-inner {
+                width: calc(100% - 32px);
+            }
+
+            .nav-call {
+                display: none;
+            }
+
+            .brand-text strong {
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero-content {
+                width: calc(100% - 32px);
+                padding-bottom: 70px;
+            }
+
+            .hero-title {
+                font-size: clamp(55px, 18vw, 95px);
+            }
+
+            .hero-title span {
+                margin-top: 15px;
+            }
+
+            .hero-subtitle {
+                font-size: 12px;
+                max-width: 330px;
+            }
+
+            .hero-location {
+                max-width: 320px;
+                line-height: 1.5;
+            }
+
+            .scroll-discover {
+                display: none;
+            }
+
+            .intro-grid {
+                gap: 70px;
+            }
+
+            .intro-image-wrap {
+                min-height: 470px;
+            }
+
+            .intro-image {
+                width: 88%;
+            }
+
+            .intro-stamp {
+                right: 0;
+            }
+
+            .highlights-head,
+            .gallery-head,
+            .experience-header {
+                display: block;
+            }
+
+            .highlights-head .section-copy,
+            .gallery-head .section-copy {
+                margin-top: 25px;
+            }
+
+            .highlight-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .highlight-card {
+                min-height: 220px;
+            }
+
+            .experience-header {
+                margin-bottom: 55px;
+            }
+
+            .experience-layout {
+                min-height: 680px;
+            }
+
+            .experience-main {
+                width: 88%;
+                height: 480px;
+            }
+
+            .experience-side {
+                width: 62%;
+                height: 290px;
+            }
+
+            .experience-copy {
+                width: 280px;
+                right: 2%;
+                top: 37%;
+                padding: 23px;
+            }
+
+            .experience-copy h3 {
+                font-size: 24px;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .event-item:nth-child(odd),
+            .event-item:nth-child(even) {
+                padding-left: 0;
+                padding-right: 0;
+                border-right: 0;
+            }
+
+            .event-item:hover {
+                padding-left: 8px;
+            }
+
+            .why-grid {
+                gap: 70px;
+            }
+
+            .why-image {
+                height: 470px;
+            }
+
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 170px;
+            }
+
+            .gallery-item:nth-child(n) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .gallery-item:first-child {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+
+            .gallery-item:nth-child(6),
+            .gallery-item:nth-child(7) {
+                grid-column: span 2;
+            }
+
+            .gallery-overlay {
+                opacity: 1;
+                padding: 10px;
+            }
+
+            .gallery-overlay span {
+                font-size: 14px;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-panel {
+                min-height: 400px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .footer-brand {
+                grid-column: auto;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+
+            .floating-whatsapp {
+                right: 17px;
+                bottom: 17px;
+                width: 54px;
+                height: 54px;
+            }
+
+            .whatsapp-tooltip {
+                display: none;
+            }
+
+            .lightbox {
+                padding: 20px;
+            }
+
+            .lightbox-prev {
+                left: 10px;
+            }
+
+            .lightbox-next {
+                right: 10px;
+            }
+
+            .lightbox-close {
+                right: 10px;
+                top: 10px;
+            }
+        }
+
+        /* =========================================================
+           REDUCED MOTION
+           ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         LOADING SCREEN
+         ========================================================= -->
+
+    <div class="loader" id="loader">
+
+        <div class="loader-inner">
+
+            <div class="loader-small">
+                Welcome
+            </div>
+
+            <div class="loader-title">
+                Dream Palace
+            </div>
+
+            <div class="loader-subtitle">
+                MAKHDUMPUR
+            </div>
+
+            <div class="loader-line">
+                <span></span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+
+    <!-- =========================================================
+         NAVIGATION
+         ========================================================= -->
+
+    <header class="navbar" id="navbar">
+
+        <div class="nav-inner">
+
+            <a href="#home" class="brand">
+
+                <div class="brand-mark">
+                    <span>D</span>
+                </div>
+
+                <div class="brand-text">
+                    <strong>DREAM PALACE</strong>
+                    <small>MAKHDUMPUR</small>
+                </div>
+
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="#home">Home</a>
+                <a href="#venue">The Venue</a>
+                <a href="#spaces">Spaces</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#events">Events</a>
+                <a href="#location">Location</a>
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+
+            <div class="nav-cta">
+
+                <a href="tel:+919262538376"
+                   class="nav-call">
+                    Call Now
+                </a>
+
+                <button class="menu-button"
+                        id="menuButton"
+                        aria-label="Open menu">
+
+                    <i data-lucide="menu"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         MOBILE MENU
+         ========================================================= -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <nav class="mobile-links">
+
+            <a href="#home">Home</a>
+            <a href="#venue">The Venue</a>
+            <a href="#spaces">Spaces</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#events">Events</a>
+            <a href="#location">Location</a>
+            <a href="#contact">Contact</a>
+
+            <a href="tel:+919262538376"
+               style="color:var(--gold-light);font-size:18px;">
+                +91 92625 38376
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-image">
+
+                <img id="heroImage"
+                     src="images/hero.jpg"
+                     alt="Dream Palace Makhdumpur marriage and banquet hall">
+
+            </div>
+
+            <div class="hero-vignette"></div>
+
+            <canvas id="particleCanvas"></canvas>
+
+            <div class="hero-content">
+
+                <div class="hero-kicker">
+                    Marriage • Banquet • Celebrations
+                </div>
+
+                <h1 class="hero-title">
+
+                    DREAM PALACE
+
+                    <span>MAKHDUMPUR</span>
+
+                </h1>
+
+                <p class="hero-subtitle">
+                    Where Every Celebration Becomes a Memory
+                </p>
+
+                <div class="hero-location">
+
+                    <i data-lucide="map-pin" width="13"></i>
+
+                    <span>
+                        Near Paibigha More • Makhdumpur • Jehanabad, Bihar
+                    </span>
+
+                </div>
+
+                <div class="hero-actions">
+
+                    <a href="#venue"
+                       class="btn btn-gold">
+                        Explore The Venue
+                        <i data-lucide="arrow-down-right" width="15"></i>
+                    </a>
+
+                    <a href="https://wa.me/919262538376"
+                       target="_blank"
+                       rel="noopener"
+                       class="btn btn-outline">
+
+                        Book / Enquire
+
+                        <i data-lucide="message-circle" width="15"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="scroll-discover">
+                Scroll To Discover
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             INTRO
+             ===================================================== -->
+
+        <section class="intro" id="venue">
+
+            <div class="container">
+
+                <div class="intro-grid">
+
+                    <div class="intro-copy reveal">
+
+                        <div class="eyebrow">
+                            The Venue
+                        </div>
+
+                        <h2 class="section-title">
+                            A Place Made
+                            <br>
+                            <em>For Moments.</em>
+                        </h2>
+
+                        <p class="section-copy">
+                            Dream Palace Makhdumpur is a newly opened
+                            marriage and banquet hall near Paibigha More,
+                            Makhdumpur, Jehanabad, Bihar, created to host
+                            memorable celebrations, gatherings and special
+                            occasions.
+                        </p>
+
+                        <div class="gold-line"
+                             style="margin-top:35px;">
+                        </div>
+
+                    </div>
+
+
+                    <div class="intro-image-wrap reveal">
+
+                        <div class="intro-image reveal-image">
+
+                            <img id="introImage"
+                                 src="images/exterior.jpg"
+                                 loading="lazy"
+                                 alt="Exterior view of Dream Palace Makhdumpur">
+
+                        </div>
+
+                        <div class="intro-frame"></div>
+
+                        <div class="intro-stamp">
+                            DREAM<br>
+                            PALACE
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="intro-number">
+                01 — INTRODUCTION
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             VENUE HIGHLIGHTS
+             ===================================================== -->
+
+        <section class="highlights" id="spaces">
+
+            <div class="container">
+
+                <div class="highlights-head reveal">
+
+                    <div>
+
+                        <div class="eyebrow">
+                            Celebrations
+                        </div>
+
+                        <h2 class="section-title"
+                            style="margin-top:20px;">
+                            Made For
+                            <em>Every Occasion.</em>
+                        </h2>
+
+                    </div>
+
+                    <p class="section-copy">
+                        A versatile destination for celebrations,
+                        gatherings and important moments.
+                    </p>
+
+                </div>
+
+
+                <div class="highlight-grid">
+
+                    <article class="highlight-card reveal">
+
+                        <span class="card-number">01</span>
+
+                        <div class="highlight-icon">
+                            <i data-lucide="heart"></i>
+                        </div>
+
+                        <h3>Weddings</h3>
+
+                        <p>
+                            Bring your wedding celebration to
+                            a space designed for meaningful moments.
+                        </p>
+
+                    </article>
+
+
+                    <article class="highlight-card reveal">
+
+                        <span class="card-number">02</span>
+
+                        <div class="highlight-icon">
+                            <i data-lucide="gem"></i>
+                        </div>
+
+                        <h3>Ring Ceremonies</h3>
+
+                        <p>
+                            Celebrate the beginning of a new
+                            chapter with family and loved ones.
+                        </p>
+
+                    </article>
+
+
+                    <article class="highlight-card reveal">
+
+                        <span class="card-number">03</span>
+
+                        <div class="highlight-icon">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+
+                        <h3>Receptions</h3>
+
+                        <p>
+                            Create an elegant setting for your
+                            special reception gathering.
+                        </p>
+
+                    </article>
+
+
+                    <article class="highlight-card reveal">
+
+                        <span class="card-number">04</span>
+
+                        <div class="highlight-icon">
+                            <i data-lucide="cake"></i>
+                        </div>
+
+                        <h3>Birthdays</h3>
+
+                        <p>
+                            Give your birthday celebration a
+                            memorable venue and atmosphere.
+                        </p>
+
+                    </article>
+
+
+                    <article class="highlight-card reveal">
+
+                        <span class="card-number">05</span>
+
+                        <div class="highlight-icon">
+                            <i data-lucide="party-popper"></i>
+                        </div>
+
+                        <h3>Parties</h3>
+
+                        <p>
+                            A versatile space for gatherings
+                            and private celebrations.
+                        </p>
+
+                    </article>
+
+
+                    <article class="highlight-card reveal">
+
+                        <span class="card-number">06</span>
+
+                        <div class="highlight-icon">
+                            <i data-lucide="briefcase-business"></i>
+                        </div>
+
+                        <h3>Corporate Meetings</h3>
+
+                        <p>
+                            A venue option for professional
+                            meetings and gatherings.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EXPERIENCE
+             ===================================================== -->
+
+        <section class="experience">
+
+            <div class="container">
+
+                <div class="experience-header reveal">
+
+                    <div>
+
+                        <div class="eyebrow">
+                            Architecture
+                        </div>
+
+                        <h2 class="section-title experience-title">
+                            The Dream Palace
+                            <br>
+                            <em>Experience.</em>
+                        </h2>
+
+                    </div>
+
+                    <p class="section-copy">
+                        Explore the architecture, spaces and
+                        atmosphere through the venue's own
+                        photography.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-layout">
+
+                    <div class="experience-main reveal-image">
+
+                        <img id="experienceMain"
+                             src="images/interior.jpg"
+                             loading="lazy"
+                             alt="Interior space of Dream Palace Makhdumpur">
+
+                        <div class="experience-label">
+
+                            <small>
+                                Inside Dream Palace
+                            </small>
+
+                            <strong>
+                                The Venue
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="experience-copy reveal">
+
+                        <div class="eyebrow">
+                            02 — Spaces
+                        </div>
+
+                        <h3 style="margin-top:20px;">
+                            Designed To Be
+                            <br>
+                            Remembered.
+                        </h3>
+
+                        <p>
+                            From the entrance to the celebration
+                            spaces, discover Dream Palace Makhdumpur
+                            through its real venue photographs.
+                        </p>
+
+                    </div>
+
+
+                    <div class="experience-side reveal-image">
+
+                        <img id="experienceSide"
+                             src="images/stage.jpg"
+                             loading="lazy"
+                             alt="Celebration stage at Dream Palace Makhdumpur">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CINEMATIC IMAGE
+             ===================================================== -->
+
+        <section class="cinematic">
+
+            <img id="cinematicImage"
+                 src="images/night.jpg"
+                 loading="lazy"
+                 alt="Dream Palace Makhdumpur venue atmosphere">
+
+            <div class="cinematic-content reveal">
+
+                <p>
+                    Dream Palace Makhdumpur
+                </p>
+
+                <h2>
+                    DREAM.
+                    <br>
+                    CELEBRATE.
+                    <br>
+                    REMEMBER.
+                </h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EVENTS
+             ===================================================== -->
+
+        <section class="events" id="events">
+
+            <div class="container">
+
+                <div class="eyebrow reveal">
+                    Events
+                </div>
+
+                <h2 class="section-title reveal"
+                    style="margin-top:20px;">
+                    Celebrations
+                    <br>
+                    <em>Made For You.</em>
+                </h2>
+
+
+                <div class="events-grid">
+
+                    <article class="event-item reveal">
+
+                        <span class="event-no">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Wedding Celebrations
+                            </h3>
+
+                            <p>
+                                A dedicated setting for celebrating
+                                one of life's most meaningful occasions.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="event-item reveal">
+
+                        <span class="event-no">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Ring Ceremonies
+                            </h3>
+
+                            <p>
+                                Celebrate a special beginning with
+                                family and friends.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="event-item reveal">
+
+                        <span class="event-no">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Receptions
+                            </h3>
+
+                            <p>
+                                A memorable space for gathering
+                                together after the ceremony.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="event-item reveal">
+
+                        <span class="event-no">
+                            04
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Birthday Celebrations
+                            </h3>
+
+                            <p>
+                                Create a memorable celebration
+                                around the people who matter.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="event-item reveal">
+
+                        <span class="event-no">
+                            05
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Private Parties
+                            </h3>
+
+                            <p>
+                                A versatile venue for special
+                                gatherings and celebrations.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="event-item reveal">
+
+                        <span class="event-no">
+                            06
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Corporate Meetings
+                            </h3>
+
+                            <p>
+                                A venue option for professional
+                                meetings and gatherings.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WHY DREAM PALACE
+             ===================================================== -->
+
+        <section class="why">
+
+            <div class="container">
+
+                <div class="why-grid">
+
+                    <div class="why-image reveal-image">
+
+                        <img id="whyImage"
+                             src="images/entrance.jpg"
+                             loading="lazy"
+                             alt="Entrance of Dream Palace Makhdumpur">
+
+                    </div>
+
+
+                    <div class="reveal">
+
+                        <div class="eyebrow">
+                            Why Dream Palace
+                        </div>
+
+                        <h2 class="section-title"
+                            style="margin-top:22px;">
+                            A New Place
+                            <br>
+                            <em>For New Memories.</em>
+                        </h2>
+
+                        <div class="why-list">
+
+                            <div class="why-row">
+
+                                <span>01</span>
+
+                                <div>
+
+                                    <h3>
+                                        Newly Opened Venue
+                                    </h3>
+
+                                    <p>
+                                        A newly opened destination
+                                        for celebrations in Makhdumpur.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="why-row">
+
+                                <span>02</span>
+
+                                <div>
+
+                                    <h3>
+                                        Multi-Purpose Event Space
+                                    </h3>
+
+                                    <p>
+                                        Suitable for different types
+                                        of gatherings and occasions.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="why-row">
+
+                                <span>03</span>
+
+                                <div>
+
+                                    <h3>
+                                        Convenient Makhdumpur Location
+                                    </h3>
+
+                                    <p>
+                                        Located near Paibigha More,
+                                        Makhdumpur, Jehanabad.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="why-row">
+
+                                <span>04</span>
+
+                                <div>
+
+                                    <h3>
+                                        Multiple Celebrations
+                                    </h3>
+
+                                    <p>
+                                        From weddings and receptions
+                                        to birthdays and meetings.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             GALLERY
+             ===================================================== -->
+
+        <section class="gallery-section" id="gallery">
+
+            <div class="container">
+
+                <div class="gallery-head reveal">
+
+                    <div>
+
+                        <div class="eyebrow">
+                            Gallery
+                        </div>
+
+                        <h2 class="section-title"
+                            style="margin-top:20px;">
+                            See The
+                            <em>Palace.</em>
+                        </h2>
+
+                    </div>
+
+                    <p class="section-copy">
+                        Explore Dream Palace Makhdumpur through
+                        photographs of the actual venue.
+                    </p>
+
+                </div>
+
+
+                <div class="gallery-grid">
+
+                    <div class="gallery-item"
+                         data-index="0">
+
+                        <img src="images/hero.jpg"
+                             loading="lazy"
+                             alt="Dream Palace Makhdumpur">
+
+                        <div class="gallery-overlay">
+                            <span>Dream Palace</span>
+                            <i>
+                                <i data-lucide="expand"></i>
+                            </i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item"
+                         data-index="1">
+
+                        <img src="images/exterior.jpg"
+                             loading="lazy"
+                             alt="Dream Palace exterior">
+
+                        <div class="gallery-overlay">
+                            <span>Exterior</span>
+                            <i>
+                                <i data-lucide="expand"></i>
+                            </i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item"
+                         data-index="2">
+
+                        <img src="images/interior.jpg"
+                             loading="lazy"
+                             alt="Dream Palace interior">
+
+                        <div class="gallery-overlay">
+                            <span>Interior</span>
+                            <i>
+                                <i data-lucide="expand"></i>
+                            </i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item"
+                         data-index="3">
+
+                        <img src="images/stage.jpg"
+                             loading="lazy"
+                             alt="Dream Palace celebration stage">
+
+                        <div class="gallery-overlay">
+                            <span>Celebration Space</span>
+                            <i>
+                                <i data-lucide="expand"></i>
+                            </i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item"
+                         data-index="4">
+
+                        <img src="images/entrance.jpg"
+                             loading="lazy"
+                             alt="Dream Palace entrance">
+
+                        <div class="gallery-overlay">
+                            <span>Entrance</span>
+                            <i>
+                                <i data-lucide="expand"></i>
+                            </i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item"
+                         data-index="5">
+
+                        <img src="images/night.jpg"
+                             loading="lazy"
+                             alt="Dream Palace at night">
+
+                        <div class="gallery-overlay">
+                            <span>Night View</span>
+                            <i>
+                                <i data-lucide="expand"></i>
+                            </i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item"
+                         data-index="6">
+
+                        <img src="images/gallery.jpg"
+                             loading="lazy"
+                             alt="Dream Palace venue gallery">
+
+                        <div class="gallery-overlay">
+                            <span>Venue Details</span>
+                            <i>
+                                <i data-lucide="expand"></i>
+                            </i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             LOCATION
+             ===================================================== -->
+
+        <section class="location" id="location">
+
+            <div class="container">
+
+                <div class="location-grid">
+
+                    <div class="location-copy reveal">
+
+                        <div class="eyebrow">
+                            Location
+                        </div>
+
+                        <h2 class="section-title">
+                            Find Your Way
+                            <br>
+                            <em>To The Palace.</em>
+                        </h2>
+
+                        <div class="address">
+
+                            <i data-lucide="map-pin"></i>
+
+                            <div>
+                                <strong>
+                                    DREAM PALACE MAKHDUMPUR
+                                </strong>
+                                <br>
+                                Near Paibigha More
+                                <br>
+                                Makhdumpur
+                                <br>
+                                Jehanabad, Bihar, India
+                            </div>
+
+                        </div>
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Dream+Palace+Makhdumpur+Paibigha+More+Makhdumpur+Jehanabad+Bihar"
+                           target="_blank"
+                           rel="noopener"
+                           class="btn btn-gold"
+                           style="margin-top:35px;width:max-content;">
+
+                            Get Directions
+
+                            <i data-lucide="navigation"
+                               width="15"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="map-panel">
+
+                        <div class="map-grid"></div>
+
+                        <div class="map-marker">
+
+                            <i data-lucide="map-pin"
+                               width="30"
+                               height="30"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTACT
+             ===================================================== -->
+
+        <section class="contact" id="contact">
+
+            <div class="container">
+
+                <div class="contact-content reveal">
+
+                    <div class="eyebrow"
+                         style="justify-content:center;">
+                        Contact & Booking
+                    </div>
+
+                    <h2 class="section-title">
+                        Let's Make
+                        <br>
+                        <em>Your Day Special.</em>
+                    </h2>
+
+                    <p class="contact-copy">
+                        Planning a wedding, celebration or special
+                        gathering? Get in touch with Dream Palace
+                        Makhdumpur.
+                    </p>
+
+                    <a href="tel:+919262538376"
+                       class="phone-number">
+                        +91 92625 38376
+                    </a>
+
+                    <div class="contact-actions">
+
+                        <a href="tel:+919262538376"
+                           class="btn btn-gold">
+
+                            <i data-lucide="phone"
+                               width="15"></i>
+
+                            Call Now
+
+                        </a>
+
+
+                        <a href="https://wa.me/919262538376"
+                           target="_blank"
+                           rel="noopener"
+                           class="btn btn-outline">
+
+                            <i data-lucide="message-circle"
+                               width="15"></i>
+
+                            WhatsApp
+
+                        </a>
+
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Dream+Palace+Makhdumpur+Paibigha+More+Makhdumpur+Jehanabad+Bihar"
+                           target="_blank"
+                           rel="noopener"
+                           class="btn btn-outline">
+
+                            <i data-lucide="map"
+                               width="15"></i>
+
+                            Get Directions
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <h2>
+                        Dream Palace
+                    </h2>
+
+                    <p>
+                        A newly opened marriage and banquet hall
+                        near Paibigha More, Makhdumpur, Jehanabad,
+                        Bihar.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <div class="footer-title">
+                        Navigation
+                    </div>
+
+                    <div class="footer-links">
+
+                        <a href="#home">Home</a>
+                        <a href="#venue">Venue</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#events">Events</a>
+                        <a href="#location">Location</a>
+                        <a href="#contact">Contact</a>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <div class="footer-title">
+                        Contact
+                    </div>
+
+                    <div class="footer-contact">
+
+                        <strong>
+                            +91 92625 38376
+                        </strong>
+
+                        <div style="margin-top:8px;">
+                            Near Paibigha More<br>
+                            Makhdumpur, Jehanabad<br>
+                            Bihar, India
+                        </div>
+
+                        <a href="https://www.instagram.com/dreampalacemakhdumpur/"
+                           target="_blank"
+                           rel="noopener"
+                           class="instagram-link"
+                           style="display:inline-block;margin-top:12px;">
+
+                            Instagram ↗
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Dream Palace Makhdumpur.
+                    All Rights Reserved.
+                </span>
+
+                <span>
+                    Managed & Promoted by
+                    <strong style="color:var(--ivory);">
+                        Newton Vlogs
+                    </strong>
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         FLOATING WHATSAPP
+         ========================================================= -->
+
+    <a href="https://wa.me/919262538376"
+       target="_blank"
+       rel="noopener"
+       class="floating-whatsapp"
+       aria-label="Enquire or Book on WhatsApp">
+
+        <i data-lucide="message-circle"
+           width="25"
+           height="25"></i>
+
+        <span class="whatsapp-tooltip">
+            Enquire / Book
+        </span>
+
+    </a>
+
+
+    <!-- =========================================================
+         LIGHTBOX
+         ========================================================= -->
+
+    <div class="lightbox" id="lightbox">
+
+        <button class="lightbox-close"
+                id="lightboxClose"
+                aria-label="Close gallery">
+
+            <i data-lucide="x"></i>
+
+        </button>
+
+
+        <button class="lightbox-prev"
+                id="lightboxPrev"
+                aria-label="Previous image">
+
+            <i data-lucide="chevron-left"></i>
+
+        </button>
+
+
+        <img class="lightbox-image"
+             id="lightboxImage"
+             src=""
+             alt="Dream Palace Makhdumpur gallery image">
+
+
+        <button class="lightbox-next"
+                id="lightboxNext"
+                aria-label="Next image">
+
+            <i data-lucide="chevron-right"></i>
+
+        </button>
+
+
+        <div class="lightbox-caption"
+             id="lightboxCaption">
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+         ========================================================= -->
+
+    <script>
+
+        /* ========================================================
+           DREAM PALACE IMAGE CONFIGURATION
+           ========================================================
+
+           REPLACE THESE 7 IMAGES WITH YOUR REAL DREAM PALACE PHOTOS.
+
+           Keep these filenames in:
+           /images/
+
+           You do NOT need to edit the rest of the HTML.
+
+        ======================================================== */
+
+        const VENUE_IMAGES = {
+
+            hero: "images/hero.jpg",
+
+            exterior: "images/exterior.jpg",
+
+            interior: "images/interior.jpg",
+
+            stage: "images/stage.jpg",
+
+            entrance: "images/entrance.jpg",
+
+            night: "images/night.jpg",
+
+            gallery: "images/gallery.jpg"
+
+        };
+
+
+        /* ========================================================
+           DREAM PALACE BUSINESS CONFIGURATION
+        ======================================================== */
+
+        const VENUE_INFO = {
+
+            name: "Dream Palace Makhdumpur",
+
+            phone: "+91 92625 38376",
+
+            whatsapp: "919262538376",
+
+            location:
+                "Near Paibigha More, Makhdumpur, Jehanabad, Bihar",
+
+            instagram:
+                "https://www.instagram.com/dreampalacemakhdumpur/"
+
+        };
+
+
+        /* ========================================================
+           APPLY IMAGE CONFIGURATION
+        ======================================================== */
+
+        const imageMap = {
+
+            heroImage: VENUE_IMAGES.hero,
+
+            introImage: VENUE_IMAGES.exterior,
+
+            experienceMain: VENUE_IMAGES.interior,
+
+            experienceSide: VENUE_IMAGES.stage,
+
+            cinematicImage: VENUE_IMAGES.night,
+
+            whyImage: VENUE_IMAGES.entrance
+
+        };
+
+
+        Object.entries(imageMap).forEach(([id, source]) => {
+
+            const element = document.getElementById(id);
+
+            if (element) {
+
+                element.src = source;
+
+            }
+
+        });
+
+
+        /* ========================================================
+           IMAGE FALLBACK
+           Prevent broken image icons.
+        ======================================================== */
+
+        document.querySelectorAll("img").forEach(img => {
+
+            img.addEventListener("error", () => {
+
+                img.style.background =
+                    "linear-gradient(135deg,#171513,#0b0a09)";
+
+                img.style.objectFit = "cover";
+
+                img.removeAttribute("src");
+
+            });
+
+        });
+
+
+        /* ========================================================
+           LUCIDE ICONS
+        ======================================================== */
+
+        if (window.lucide) {
+
+            lucide.createIcons();
+
+        }
+
+
+        /* ========================================================
+           LOADING SCREEN
+        ======================================================== */
+
+        window.addEventListener("load", () => {
+
+            setTimeout(() => {
+
+                const loader =
+                    document.getElementById("loader");
+
+                if (loader) {
+
+                    loader.classList.add("hide");
+
+                }
+
+            }, 1100);
+
+        });
+
+
+        /* ========================================================
+           NAVIGATION SCROLL EFFECT
+        ======================================================== */
+
+        const navbar =
+            document.getElementById("navbar");
+
+        const scrollProgress =
+            document.getElementById("scrollProgress");
+
+
+        function handleScroll() {
+
+            const scrollY =
+                window.scrollY;
+
+            if (scrollY > 50) {
+
+                navbar.classList.add("scrolled");
+
+            } else {
+
+                navbar.classList.remove("scrolled");
+
+            }
+
+
+            const documentHeight =
+                document.documentElement.scrollHeight -
+                window.innerHeight;
+
+            const progress =
+                documentHeight > 0
+                    ? (scrollY / documentHeight) * 100
+                    : 0;
+
+            scrollProgress.style.width =
+                progress + "%";
+
+        }
+
+
+        window.addEventListener(
+            "scroll",
+            handleScroll,
+            { passive: true }
+        );
+
+
+        handleScroll();
+
+
+        /* ========================================================
+           MOBILE MENU
+        ======================================================== */
+
+        const menuButton =
+            document.getElementById("menuButton");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+
+        function closeMobileMenu() {
+
+            mobileMenu.classList.remove("open");
+
+            document.body.classList.remove("menu-open");
+
+            menuButton.innerHTML =
+                '<i data-lucide="menu"></i>';
+
+            lucide.createIcons();
+
+        }
+
+
+        menuButton.addEventListener("click", () => {
+
+            const isOpen =
+                mobileMenu.classList.contains("open");
+
+
+            if (isOpen) {
+
+                closeMobileMenu();
+
+            } else {
+
+                mobileMenu.classList.add("open");
+
+                document.body.classList.add("menu-open");
+
+                menuButton.innerHTML =
+                    '<i data-lucide="x"></i>';
+
+                lucide.createIcons();
+
+            }
+
+        });
+
+
+        document.querySelectorAll(".mobile-links a")
+            .forEach(link => {
+
+                link.addEventListener(
+                    "click",
+                    closeMobileMenu
+                );
+
+            });
+
+
+        /* ========================================================
+           SMOOTH ANCHOR SCROLL
+        ======================================================== */
+
+        document.querySelectorAll('a[href^="#"]')
+            .forEach(link => {
+
+                link.addEventListener("click", event => {
+
+                    const targetID =
+                        link.getAttribute("href");
+
+                    if (
+                        !targetID ||
+                        targetID === "#"
+                    ) return;
+
+                    const target =
+                        document.querySelector(targetID);
+
+                    if (!target) return;
+
+                    event.preventDefault();
+
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                });
+
+            });
+
+
+        /* ========================================================
+           SCROLL REVEAL
+        ======================================================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        if ("IntersectionObserver" in window) {
+
+            const revealObserver =
+                new IntersectionObserver(
+                    entries => {
+
+                        entries.forEach(entry => {
+
+                            if (entry.isIntersecting) {
+
+                                entry.target.classList.add(
+                                    "visible"
+                                );
+
+                                revealObserver.unobserve(
+                                    entry.target
+                                );
+
+                            }
+
+                        });
+
+                    },
+                    {
+                        threshold: .12,
+                        rootMargin: "0px 0px -50px 0px"
+                    }
+                );
+
+
+            revealElements.forEach(element => {
+
+                revealObserver.observe(element);
+
+            });
+
+        } else {
+
+            revealElements.forEach(element => {
+
+                element.classList.add("visible");
+
+            });
+
+        }
+
+
+        /* ========================================================
+           PARALLAX CINEMATIC IMAGE
+        ======================================================== */
+
+        const cinematic =
+            document.querySelector(".cinematic");
+
+        const cinematicImage =
+            document.getElementById("cinematicImage");
+
+
+        function cinematicParallax() {
+
+            if (!cinematic || !cinematicImage) return;
+
+            if (window.innerWidth < 700) return;
+
+            const rect =
+                cinematic.getBoundingClientRect();
+
+            const viewport =
+                window.innerHeight;
+
+            if (
+                rect.bottom < 0 ||
+                rect.top > viewport
+            ) return;
+
+            const progress =
+                (viewport - rect.top) /
+                (viewport + rect.height);
+
+            const offset =
+                (progress - .5) * 60;
+
+            cinematicImage.style.transform =
+                `translate3d(0, ${offset}px, 0)`;
+
+        }
+
+
+        window.addEventListener(
+            "scroll",
+            cinematicParallax,
+            { passive: true }
+        );
+
+
+        /* ========================================================
+           CUSTOM CURSOR
+        ======================================================== */
+
+        const cursorDot =
+            document.getElementById("cursorDot");
+
+        const cursorRing =
+            document.getElementById("cursorRing");
+
+
+        let mouseX = 0;
+        let mouseY = 0;
+
+        let ringX = 0;
+        let ringY = 0;
+
+
+        if (
+            window.matchMedia("(pointer:fine)").matches
+        ) {
+
+            document.body.classList.add("cursor-ready");
+
+
+            window.addEventListener("mousemove", event => {
+
+                mouseX = event.clientX;
+                mouseY = event.clientY;
+
+                cursorDot.style.left =
+                    mouseX + "px";
+
+                cursorDot.style.top =
+                    mouseY + "px";
+
+            });
+
+
+            function animateCursor() {
+
+                ringX +=
+                    (mouseX - ringX) * .14;
+
+                ringY +=
+                    (mouseY - ringY) * .14;
+
+                cursorRing.style.left =
+                    ringX + "px";
+
+                cursorRing.style.top =
+                    ringY + "px";
+
+                requestAnimationFrame(
+                    animateCursor
+                );
+
+            }
+
+            animateCursor();
+
+
+            document.querySelectorAll(
+                "a, button, .gallery-item"
+            ).forEach(element => {
+
+                element.addEventListener(
+                    "mouseenter",
+                    () => document.body.classList.add(
+                        "cursor-hover"
+                    )
+                );
+
+                element.addEventListener(
+                    "mouseleave",
+                    () => document.body.classList.remove(
+                        "cursor-hover"
+                    )
+                );
+
+            });
+
+        }
+
+
+        /* ========================================================
+           GALLERY
+        ======================================================== */
+
+        const galleryImages = [
+
+            {
+                src: VENUE_IMAGES.hero,
+                title: "Dream Palace"
+            },
+
+            {
+                src: VENUE_IMAGES.exterior,
+                title: "Exterior"
+            },
+
+            {
+                src: VENUE_IMAGES.interior,
+                title: "Interior"
+            },
+
+            {
+                src: VENUE_IMAGES.stage,
+                title: "Celebration Space"
+            },
+
+            {
+                src: VENUE_IMAGES.entrance,
+                title: "Entrance"
+            },
+
+            {
+                src: VENUE_IMAGES.night,
+                title: "Night View"
+            },
+
+            {
+                src: VENUE_IMAGES.gallery,
+                title: "Venue Details"
+            }
+
+        ];
+
+
+        const lightbox =
+            document.getElementById("lightbox");
+
+        const lightboxImage =
+            document.getElementById("lightboxImage");
+
+        const lightboxCaption =
+            document.getElementById("lightboxCaption");
+
+        const lightboxClose =
+            document.getElementById("lightboxClose");
+
+        const lightboxPrev =
+            document.getElementById("lightboxPrev");
+
+        const lightboxNext =
+            document.getElementById("lightboxNext");
+
+
+        let currentGalleryIndex = 0;
+
+
+        function showGalleryImage(index) {
+
+            if (index < 0) {
+
+                index =
+                    galleryImages.length - 1;
+
+            }
+
+            if (
+                index >= galleryImages.length
+            ) {
+
+                index = 0;
+
+            }
+
+
+            currentGalleryIndex = index;
+
+
+            const image =
+                galleryImages[index];
+
+
+            lightboxImage.src =
+                image.src;
+
+            lightboxImage.alt =
+                image.title +
+                " — Dream Palace Makhdumpur";
+
+
+            lightboxCaption.textContent =
+                image.title;
+
+
+            lightbox.classList.add("open");
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+
+        function closeGallery() {
+
+            lightbox.classList.remove("open");
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        document.querySelectorAll(
+            ".gallery-item"
+        ).forEach(item => {
+
+            item.addEventListener(
+                "click",
+                () => {
+
+                    const index =
+                        Number(
+                            item.dataset.index
+                        );
+
+                    showGalleryImage(index);
+
+                }
+            );
+
+        });
+
+
+        lightboxClose.addEventListener(
+            "click",
+            closeGallery
+        );
+
+
+        lightboxPrev.addEventListener(
+            "click",
+            () => {
+
+                showGalleryImage(
+                    currentGalleryIndex - 1
+                );
+
+            }
+        );
+
+
+        lightboxNext.addEventListener(
+            "click",
+            () => {
+
+                showGalleryImage(
+                    currentGalleryIndex + 1
+                );
+
+            }
+        );
+
+
+        lightbox.addEventListener(
+            "click",
+            event => {
+
+                if (
+                    event.target === lightbox
+                ) {
+
+                    closeGallery();
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if (
+                    !lightbox.classList.contains("open")
+                ) return;
+
+
+                if (event.key === "Escape") {
+
+                    closeGallery();
+
+                }
+
+
+                if (event.key === "ArrowRight") {
+
+                    showGalleryImage(
+                        currentGalleryIndex + 1
+                    );
+
+                }
+
+
+                if (event.key === "ArrowLeft") {
+
+                    showGalleryImage(
+                        currentGalleryIndex - 1
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* ========================================================
+           TOUCH SWIPE FOR LIGHTBOX
+        ======================================================== */
+
+        let touchStartX = 0;
+
+
+        lightbox.addEventListener(
+            "touchstart",
+            event => {
+
+                touchStartX =
+                    event.changedTouches[0].screenX;
+
+            },
+            { passive: true }
+        );
+
+
+        lightbox.addEventListener(
+            "touchend",
+            event => {
+
+                const touchEndX =
+                    event.changedTouches[0].screenX;
+
+                const distance =
+                    touchEndX - touchStartX;
+
+
+                if (Math.abs(distance) < 50)
+                    return;
+
+
+                if (distance < 0) {
+
+                    showGalleryImage(
+                        currentGalleryIndex + 1
+                    );
+
+                } else {
+
+                    showGalleryImage(
+                        currentGalleryIndex - 1
+                    );
+
+                }
+
+            },
+            { passive: true }
+        );
+
+
+        /* ========================================================
+           THREE.JS GOLD PARTICLES
+           ======================================================== */
+
+        const canvas =
+            document.getElementById(
+                "particleCanvas"
+            );
+
+
+        const prefersReducedMotion =
+            window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches;
+
+
+        const lowPowerDevice =
+            navigator.hardwareConcurrency &&
+            navigator.hardwareConcurrency <= 4;
+
+
+        if (
+            window.THREE &&
+            canvas &&
+            !prefersReducedMotion &&
+            window.innerWidth > 760 &&
+            !lowPowerDevice
+        ) {
+
+            try {
+
+                const scene =
+                    new THREE.Scene();
+
+
+                const camera =
+                    new THREE.PerspectiveCamera(
+                        55,
+                        window.innerWidth /
+                        window.innerHeight,
+                        .1,
+                        100
+                    );
+
+
+                camera.position.z = 10;
+
+
+                const renderer =
+                    new THREE.WebGLRenderer({
+                        canvas,
+                        alpha: true,
+                        antialias: true
+                    });
+
+
+                renderer.setPixelRatio(
+                    Math.min(
+                        window.devicePixelRatio,
+                        1.5
+                    )
+                );
+
+
+                renderer.setSize(
+                    window.innerWidth,
+                    window.innerHeight
+                );
+
+
+                const particleCount = 280;
+
+
+                const positions =
+                    new Float32Array(
+                        particleCount * 3
+                    );
+
+
+                for (
+                    let i = 0;
+                    i < particleCount * 3;
+                    i += 3
+                ) {
+
+                    positions[i] =
+                        (Math.random() - .5) * 18;
+
+                    positions[i + 1] =
+                        (Math.random() - .5) * 10;
+
+                    positions[i + 2] =
+                        (Math.random() - .5) * 8;
+
+                }
+
+
+                const geometry =
+                    new THREE.BufferGeometry();
+
+
+                geometry.setAttribute(
+                    "position",
+                    new THREE.BufferAttribute(
+                        positions,
+                        3
+                    )
+                );
+
+
+                const material =
+                    new THREE.PointsMaterial({
+
+                        color: 0xd7b66f,
+
+                        size: .025,
+
+                        transparent: true,
+
+                        opacity: .7,
+
+                        depthWrite: false
+
+                    });
+
+
+                const particles =
+                    new THREE.Points(
+                        geometry,
+                        material
+                    );
+
+
+                scene.add(particles);
+
+
+                let targetX = 0;
+                let targetY = 0;
+
+
+                window.addEventListener(
+                    "mousemove",
+                    event => {
+
+                        targetX =
+                            (event.clientX /
+                                window.innerWidth -
+                                .5) * .5;
+
+                        targetY =
+                            (event.clientY /
+                                window.innerHeight -
+                                .5) * .5;
+
+                    },
+                    { passive: true }
+                );
+
+
+                function renderParticles() {
+
+                    particles.rotation.y +=
+                        .00025;
+
+                    particles.rotation.x +=
+                        .00008;
+
+
+                    particles.rotation.y +=
+                        (targetX -
+                         particles.rotation.y) *
+                        .0007;
+
+
+                    particles.rotation.x +=
+                        (targetY -
+                         particles.rotation.x) *
+                        .0007;
+
+
+                    renderer.render(
+                        scene,
+                        camera
+                    );
+
+
+                    requestAnimationFrame(
+                        renderParticles
+                    );
+
+                }
+
+
+                renderParticles();
+
+
+                window.addEventListener(
+                    "resize",
+                    () => {
+
+                        camera.aspect =
+                            window.innerWidth /
+                            window.innerHeight;
+
+                        camera.updateProjectionMatrix();
+
+                        renderer.setSize(
+                            window.innerWidth,
+                            window.innerHeight
+                        );
+
+                    }
+                );
+
+            } catch (error) {
+
+                console.warn(
+                    "Three.js effect disabled:",
+                    error
+                );
+
+            }
+
+        }
+
+
+        /* ========================================================
+           MAGNETIC BUTTON EFFECT
+        ======================================================== */
+
+        if (
+            window.matchMedia("(pointer:fine)").matches &&
+            !prefersReducedMotion
+        ) {
+
+            document.querySelectorAll(
+                ".btn"
+            ).forEach(button => {
+
+                button.addEventListener(
+                    "mousemove",
+                    event => {
+
+                        const rect =
+                            button.getBoundingClientRect();
+
+                        const x =
+                            event.clientX -
+                            rect.left -
+                            rect.width / 2;
+
+                        const y =
+                            event.clientY -
+                            rect.top -
+                            rect.height / 2;
+
+
+                        button.style.transform =
+                            `translate(${x * .08}px,
+                                       ${y * .08}px)`;
+
+                    }
+                );
+
+
+                button.addEventListener(
+                    "mouseleave",
+                    () => {
+
+                        button.style.transform =
+                            "";
+
+                    }
+                );
+
+            });
+
+        }
+
+
+        /* ========================================================
+           IMAGE LAZY LOADING FALLBACK
+        ======================================================== */
+
+        if ("loading" in HTMLImageElement.prototype) {
+
+            document.querySelectorAll(
+                "img[loading='lazy']"
+            ).forEach(img => {
+
+                if (!img.src) {
+
+                    img.src =
+                        img.getAttribute("data-src");
+
+                }
+
+            });
+
+        }
+
+
+        /* ========================================================
+           UPDATE WHATSAPP LINKS FROM CONFIG
+        ======================================================== */
+
+        document.querySelectorAll(
+            'a[href*="wa.me"]'
+        ).forEach(link => {
+
+            link.href =
+                "https://wa.me/" +
+                VENUE_INFO.whatsapp;
+
+        });
+
+
+        /* ========================================================
+           UPDATE PHONE LINKS FROM CONFIG
+        ======================================================== */
+
+        const cleanPhone =
+            VENUE_INFO.phone
+                .replace(/\s/g, "");
+
+
+        document.querySelectorAll(
+            'a[href^="tel:"]'
+        ).forEach(link => {
+
+            link.href =
+                "tel:" + cleanPhone;
+
+        });
+
+
+        /* ========================================================
+           KEYBOARD ACCESSIBILITY
+        ======================================================== */
+
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if (event.key === "Tab") {
+
+                    document.body.classList.add(
+                        "keyboard-user"
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* ========================================================
+           PREVENT HORIZONTAL OVERFLOW
+        ======================================================== */
+
+        document.documentElement.style
+            .overflowX = "hidden";
+
+
+        /* ========================================================
+           FINAL ICON REFRESH
+        ======================================================== */
+
+        if (window.lucide) {
+
+            lucide.createIcons();
+
+        }
+
+    </script>
+
+</body>
+</html>
